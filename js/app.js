@@ -27,24 +27,23 @@ function getData(url) {
 
 
 var data;
+
+// var number= 0,
+// arr = [1,2,3,4,5,6,10,13,14,15,20,22,23,24,30,44,78,84,85,86,87];
+//   for (var i = 0; i<arr.length; i++){
+//     number = arr[i];
+//   }
+// getData('https://swapi.co/api/people/'+number +'')
 getData('https://swapi.co/api/people/1')
 .then((respuesta) => {
   data = JSON.parse(respuesta)
-})
+}) 
 .then(() => {
-  console.log(data.name);
-  console.log(data.gender);
-  console.log(data.homeworld);
-  console.log(data.birth_year);
-  console.log(data.height);
-  console.log(data.mass);
-  console.log(data.eye_color);
-  console.log(data.hair_color);
-  console.log(data.skin_color);
-  console.log(data.films);
   
   var images = document.getElementById('1');
+  // var images = document.getElementById(number);
   images.addEventListener("click", function(){
+  document.getElementById("exampleModalLongTitle").innerHTML = data.name;  
   document.getElementById("gender").innerHTML = data.gender;
   document.getElementById("home-world").innerHTML = data.gender;
   document.getElementById("birth-year").innerHTML = data.homeworld;
@@ -56,4 +55,5 @@ getData('https://swapi.co/api/people/1')
   document.getElementById("films").innerHTML = data.films;
 });
 })
+  
 
