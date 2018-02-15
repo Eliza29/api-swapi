@@ -1,13 +1,16 @@
+/* style header animation */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 body {
   font-family: 'Roboto', sans-serif;
   padding-top: 20px;
-  padding-bottom: 20px;
   background: #000 url(https://miukimiu.github.io/star-wars-random-quotes/images/bg.jpg);
 }
+
 body a {
   color: #00aced;
 }
+
 body a:hover {
   color: #0087ba;
 }
@@ -17,14 +20,7 @@ button:focus {
   outline: 0 !important;
 }
 
-.container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-.header,
-.footer {
+.header {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -32,6 +28,7 @@ button:focus {
 .header {
   text-align: center;
 }
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -51,29 +48,21 @@ button:focus {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
   /* Remove the padding we set earlier */
-  .header,
-  .footer {
+  .header {
+    margin-bottom: 30px;    
     padding-left: 0;
     padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
   }
 }
 
 .main {
   position: relative;
-  padding: 40px 0 100px;
 }
 
 .quotes {
+  padding: 1.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -84,8 +73,9 @@ button:focus {
   pointer-events: none;
 }
 
-.quotes h2 {
-  padding-top: 40px;
+.quotes h3 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
 }
 
 .saber {
@@ -170,4 +160,8 @@ button:focus {
   }
 }
 
+/* style section characters */
 
+#people-container h2 {
+  color: #FFE81F;
+}

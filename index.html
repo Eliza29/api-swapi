@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Star Wars</title>
 </head>
+
 <body>
-  <header>
 
-  </header>
-
-  <div class="container">
-  <div class="header">
-    <img src="https://miukimiu.github.io/star-wars-random-quotes/images/Star_Wars_Logo.svg" class="header__logo">
-  </div>
-  <!-- / end background -->
-
-  <div class="main">
-    <div class="saber">
-      <div id="saber__light-dark"></div>
-      <div id="saber__light"></div>
-      <button class="saber__btn" id="quoteButton"></button>
-      <img id="clicker" src="https://miukimiu.github.io/star-wars-random-quotes/images/clicker.svg">
-    </div>
-
-    <div class="quotes">
-      <h2 id="quote"></h2>
-      <p id="character"></p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="header col-12">
+        <img src="https://miukimiu.github.io/star-wars-random-quotes/images/Star_Wars_Logo.svg" class="header__logo">
+      </div>
+      <div class="main col-12">
+        <div class="saber py-2 my-3">
+          <div id="saber__light-dark"></div>
+          <div id="saber__light"></div>
+          <button class="saber__btn" id="quoteButton"></button>
+          <img id="clicker" src="https://miukimiu.github.io/star-wars-random-quotes/images/clicker.svg">
+        </div>
+        <div class="quotes">
+          <h3 id="quote"></h3>
+          <p id="character"></p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- script -->
-<script src="js/headerAnimation.js"></script>
+  <section id="people-container" class="my-2">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <h2 class="col-12 text-center my-3">Discover the power of force in your favorite characters.</h2>
+      </div>
+      <div class="row">
+        <figure class="col-6 col-md-2"><img src="assets/images/1.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/2.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/3.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/4.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/5.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/6.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/7.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/8.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/9.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/10.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/11.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/12.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/13.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/14.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/15.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/16.png" class="img-fluid" alt=""></figure>
+        <figure class="col-6 col-md-2"><img src="assets/images/17.png" class="img-fluid" alt=""></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/headerAnimation.js"></script>    
+  <script src="js/app.js"></script>
 </body>
+
 </html>
