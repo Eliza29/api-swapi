@@ -31,4 +31,14 @@ getData('https://swapi.co/api/people/1')
 })
 .then(() => {
   console.log(data.name);
+  console.log(data.gender);
+  console.log(data.homeworld);
+  console.log(data.birth_year);
+  console.log(data.height);
+  console.log(data.mass);
+  console.log(data.eye_color);
+  console.log(data.hair_color);
+  console.log(data.skin_color);
+  console.log(data.films);
 })
+
