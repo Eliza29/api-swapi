@@ -16,7 +16,7 @@ function getData(url) {
     }
 
     req.onerror = function () {
-      reject(Error("Network Error"));
+      reject(Error(" Error"));
     }
 
     req.send()
@@ -24,6 +24,8 @@ function getData(url) {
   })
   
 }
+
+
 var data;
 getData('https://swapi.co/api/people/1')
 .then((respuesta) => {
@@ -40,5 +42,18 @@ getData('https://swapi.co/api/people/1')
   console.log(data.hair_color);
   console.log(data.skin_color);
   console.log(data.films);
+  
+  var images = document.getElementById('1');
+  images.addEventListener("click", function(){
+  document.getElementById("gender").innerHTML = data.gender;
+  document.getElementById("home-world").innerHTML = data.gender;
+  document.getElementById("birth-year").innerHTML = data.homeworld;
+  document.getElementById("height").innerHTML = data.birth_year;
+  document.getElementById("mass").innerHTML = data.height;
+  document.getElementById("eye").innerHTML = data.mass;
+  document.getElementById("hair").innerHTML = data.eye_color;
+  document.getElementById("skin").innerHTML = data.skin_color;
+  document.getElementById("films").innerHTML = data.films;
+});
 })
 
