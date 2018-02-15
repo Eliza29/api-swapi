@@ -162,6 +162,21 @@ button:focus {
 
 /* style section characters */
 
-#people-container h2 {
+#people-container h2, .modal-title, .modal-body b {
   color: #FFE81F;
 }
+
+#people-container img {
+  cursor: pointer;
+}
+
+/* modal style */
+
+.modal-content {
+  background-color: #000;
+}
+
+.modal-body p>span{
+  color: #fff;
+}
+
