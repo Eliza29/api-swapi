@@ -27,7 +27,7 @@ window.onload = () => {
     $('#eye').html(data.eye_color); 
     $('#hair').html(data.hair_color);
     $('#skin').html(data.skin_color);
-    $('#insert-img').attr('src','assets/images/'+ idImg +'.png')
+    $('#insert-img').attr('src', 'assets/images/' + idImg + '.png');
     // $('#films').html() = data.films;
   }
 
