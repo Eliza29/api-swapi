@@ -1,8 +1,8 @@
 window.onload = () => {
-debugger;
+  let idImg;
   function getData(event) {
     event.preventDefault();
-    let idImg = event.target.id;
+    idImg = event.target.id;
     let url = `https://swapi.co/api/people/${idImg}`;
     var req = new XMLHttpRequest();
     req.open('GET', url);
@@ -17,7 +17,18 @@ debugger;
 
   function addDataCharacters() {
     const data = JSON.parse(this.responseText);
-    
+    console.log(data);
+    $('#exampleModalLongTitle').html(data.name); 
+    $('#gender').html(data.gender);
+    $('#home-world').html(data.homeworld); 
+    $('#birth-year').html(data.birth_year);
+    $('#height').html(data.height);
+    $('#mass').html(data.mass); 
+    $('#eye').html(data.eye_color); 
+    $('#hair').html(data.hair_color);
+    $('#skin').html(data.skin_color);
+    $('#insert-img').attr('src','assets/images/'+ idImg +'.png')
+    // $('#films').html() = data.films;
   }
 
   var images = $('#people-container figure img');
@@ -28,15 +39,6 @@ debugger;
   });
 
   // images.addEventListener("click", function () {
-  //   document.getElementById("exampleModalLongTitle").innerHTML = data.name;
-  //   document.getElementById("gender").innerHTML = data.gender;
-  //   document.getElementById("home-world").innerHTML = data.gender;
-  //   document.getElementById("birth-year").innerHTML = data.homeworld;
-  //   document.getElementById("height").innerHTML = data.birth_year;
-  //   document.getElementById("mass").innerHTML = data.height;
-  //   document.getElementById("eye").innerHTML = data.mass;
-  //   document.getElementById("hair").innerHTML = data.eye_color;
-  //   document.getElementById("skin").innerHTML = data.skin_color;
-  //   document.getElementById("films").innerHTML = data.films;
+  //   
   // });
 };
