@@ -1,5 +1,6 @@
 window.onload = () => {
   let idImg;
+  let resultHome;
   function getData(event) {
     event.preventDefault();
     idImg = event.target.id;
@@ -17,19 +18,6 @@ window.onload = () => {
 
   function addDataCharacters() {
     const data = JSON.parse(this.responseText);
-    console.log(data);
-    $('#exampleModalLongTitle').html(data.name);
-    $('#gender').html(data.gender);
-    // $('#home-world').html(data.homeworld);
-    $('#birth-year').html(data.birth_year);
-    $('#height').html(data.height);
-    $('#mass').html(data.mass);
-    $('#eye').html(data.eye_color);
-    $('#hair').html(data.hair_color);
-    $('#skin').html(data.skin_color);
-    $('#insert-img').attr('src', 'assets/images/' + idImg + '.png');
-
-
     // obteniendo datos de homeworld 
     let newRequest = new XMLHttpRequest();
     newRequest.open('GET', data.homeworld);
@@ -39,12 +27,54 @@ window.onload = () => {
 
     function getExtraData() {
       const dataHome = JSON.parse(this.responseText);
-      const resultHome = dataHome.name;
-      console.log(resultHome);
-      $('#home-world').html(resultHome);
-
+      resultHome = dataHome.name;
     }
-    
+
+    // funcionalidad para crear el contenido del modal
+    let modalBody = $('.modal-body>.container-fluid>.row');
+    modalBody.html('');    
+    let contentModal = `
+      <figure class="col-11 col-md-5">
+        <img src="assets/images/${idImg}.png" id="insert-img" class="img-fluid">
+      </figure>
+      <div class="col-11 col-md-5">
+        <p>
+          <b>Gender:</b>
+          <span id="gender">${data.gender}</span>
+        </p>
+        <p>
+          <b>Home World:</b>
+          <span id="home-world">${resultHome}</span>
+        </p>
+        <p>
+          <b>Birth Year:</b>
+          <span id="birth-year">${data.birth_year}</span>
+        </p>
+        <p>
+          <b>Height:</b>
+          <span id="height">${data.height}</span>
+        </p>
+        <p>
+          <b>Mass:</b>
+          <span id="mass">${data.mass}</span>
+        </p>
+        <p>
+          <b>Eye color:</b>
+          <span id="eye">${data.eye_color}</span>
+        </p>
+        <p>
+          <b>Hair color:</b>
+          <span id="hair">${data.hair_color}</span>
+        </p>
+        <p>
+          <b>Skin color:</b>
+          <span id="skin">${data.skin_color}</span>
+        </p>
+      </div>
+    `;
+    $(modalBody).html(contentModal);
+    $('#exampleModalLongTitle').html(data.name);
+ 
   }
 
   var images = $('#people-container figure img');
@@ -54,7 +84,4 @@ window.onload = () => {
     img.addEventListener('click', getData);
   });
 
-  // images.addEventListener("click", function () {
-  //   
-  // });
 };

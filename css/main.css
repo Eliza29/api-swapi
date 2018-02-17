@@ -75,7 +75,7 @@ button:focus {
 
 .quotes h3 {
   padding-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .saber {
@@ -162,12 +162,16 @@ button:focus {
 
 /* style section characters */
 
-#people-container h2, .modal-title, .modal-body b {
+#people-container h2, .modal-title, .modal-body b, footer {
   color: #FFE81F;
 }
 
 #people-container img {
   cursor: pointer;
+}
+
+#people-container h2 {
+  font-size: 1.5rem;
 }
 
 /* modal style */
@@ -180,3 +184,15 @@ button:focus {
   color: #fff;
 }
 
+@media (min-width: 768px) {
+
+  #people-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .quotes h3 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+}
