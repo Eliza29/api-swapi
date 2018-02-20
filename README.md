@@ -1,7 +1,11 @@
 # SWAPI (The Stars Wars API)
-
-INTRODUCCION  
+ 
 Para la realización del proyecto se uso la Api de star wars SWAPI la cual contiene todos los datos de los personajes del universo de Star Wars, así mismo se uso el modelo AJAX para optimizar la actualización de la página sin que haya ningún inconveniente y el usuario pueda quedar satisfecho.
+
+![Sin titulo](https://user-images.githubusercontent.com/32286663/36440425-aaf9af6e-163d-11e8-984c-4f9584a6a8c7.png)
+
+Desarrollado por  [Laboratoria](http://www.laboratoria.la/ "titulo")
+
 
 HERRAMIENTAS  
 Las tecnologías que se usaron para crear nuestra web son:
@@ -13,10 +17,6 @@ Las tecnologías que se usaron para crear nuestra web son:
 
 CONTENIDO  
 - Galeria de imagenes con tus personajes favoritos de Star Wars, que al darle click despliega un modal que contiene la información extraída de la API sobre cada personaje.
-
-### Vista de Web StarWars
-
-![Sin titulo](assets/webstarwars.png)
 
 Desarrolladoras: 
 - Elizabeth Segura
