@@ -180,7 +180,7 @@ button:focus {
   background-color: #000;
 }
 
-.modal-body p>span{
+.modal-body p>span, figcaption{
   color: #fff;
 }
 

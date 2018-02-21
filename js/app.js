@@ -1,6 +1,12 @@
 window.onload = () => {
   let idImg;
   let resultHome;
+
+  function resetModal() {
+    $('.modal-body>.container-fluid>.row').html('');
+    $('#exampleModalLongTitle').html('');    
+  }
+
   function getData(event) {
     event.preventDefault();
     idImg = event.target.id;
@@ -74,7 +80,6 @@ window.onload = () => {
     `;
     $(modalBody).html(contentModal);
     $('#exampleModalLongTitle').html(data.name);
- 
   }
 
   var images = $('#people-container figure img');
@@ -84,4 +89,6 @@ window.onload = () => {
     img.addEventListener('click', getData);
   });
 
+  $('body').click(resetModal);
+  $('#brn-close').click(resetModal);
 };
