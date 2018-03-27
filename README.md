@@ -1,5 +1,6 @@
 # SWAPI (The Stars Wars API)
-Para la realización del proyecto se uso la Api de star wars SWAPI la cual contiene todos los datos de los personajes del universo de Star Wars, así mismo se uso el modelo AJAX para optimizar la actualización de la página.
+Start Wars es una web dirigida a los amantes de la saga, donde encontraras toda la información de tus personajes favoritos.
+Para la realización del proyecto se uso la Api de star wars SWAPI, así mismo se uso el modelo AJAX para optimizar la actualización de la página.
 
 ![Sin titulo](https://user-images.githubusercontent.com/32286663/36440425-aaf9af6e-163d-11e8-984c-4f9584a6a8c7.png)
 
