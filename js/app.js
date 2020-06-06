@@ -10,7 +10,7 @@ window.onload = () => {
   function getData(event) {
     event.preventDefault();
     idImg = event.target.id;
-    let url = `https://swapi.co/api/people/${idImg}`;
+    let url = `https://swapi.dev/api/people/${idImg}`;
     var req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = addDataCharacters;
